@@ -25,16 +25,16 @@ public abstract class PessoaSingleTable implements Entidade {
 		return codigoPessoa;
 	}
 
-	public void setCodigoPessoa(String codigoPessoa) {
-		this.codigoPessoa = codigoPessoa;
+	public void setCodigoPessoa(String pCodigoPessoa) {
+		this.codigoPessoa = pCodigoPessoa;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String pNome) {
+		this.nome = pNome;
 	}
 	
 }

@@ -15,8 +15,8 @@ public class AlunoSingleTable extends PessoaSingleTable {
 		return isFies;
 	}
 
-	public void setIsFies(Boolean isFies) {
-		this.isFies = isFies;
+	public void setIsFies(Boolean pIsFies) {
+		this.isFies = pIsFies;
 	}
 	
 }
