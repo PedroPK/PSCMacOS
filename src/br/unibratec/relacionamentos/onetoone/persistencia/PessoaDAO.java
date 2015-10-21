@@ -19,10 +19,7 @@ import javax.persistence.criteria.Root;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.service.ServiceRegistry;
 import org.hibernate.sql.JoinType;
 
 import br.unibratec.persistencia.AbstractDAO;
@@ -77,6 +74,7 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			DadosPessoais dadosPessoais = manager.find(DadosPessoais.class, pDadosPessoais);
+			dadosPessoais.toString();
 			
 			manager.close();
 		}
@@ -87,6 +85,7 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			DadosPessoais dadosPessoais = manager.find(DadosPessoais.class, pCPF);
+			dadosPessoais.toString();
 			
 			manager.close();
 		}
@@ -99,6 +98,7 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			Pessoa pessoa = manager.find(Pessoa.class, pPessoa);
+			pessoa.toString();
 			
 			manager.close();
 		}
@@ -109,6 +109,7 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			Pessoa pessoa = manager.find(Pessoa.class, pCPF);
+			pessoa.toString();
 			
 			manager.close();
 		}
@@ -128,6 +129,9 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 				if ( BibliotecaFuncoes.isArrayValido(objetosColuna, 1) ) {
 					Pessoa pessoa = (Pessoa) objetosColuna[0];
 					DadosPessoais dadosPessoais = (DadosPessoais) objetosColuna[1];
+					
+					pessoa.toString();
+					dadosPessoais.toString();
 				}
 			}
 		}
@@ -197,7 +201,7 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 		
 		Collection<Pessoa> pessoas = 
 			queryParametrizadaPessoa.getResultList();
-		
+		pessoas.toString();
 		
 		manager.close();
 	}
@@ -248,6 +252,7 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 		TypedQuery<Pessoa> queryPessoa = manager.createQuery(queryCriteria);
 		
 		Collection<Pessoa> pessoas = queryPessoa.getResultList();
+		pessoas.toString();
 		
 		manager.close();
 	}
@@ -289,6 +294,9 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 		
 		Collection<Pessoa> pessoas = criteriaHibernate.list();
 		Object pessoa = session.load(Pessoa.class, pCPF);
+		
+		pessoas.toString();
+		pessoa.toString();
 		
 		session.close();
 		factory.close();

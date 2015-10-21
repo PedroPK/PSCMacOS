@@ -30,7 +30,7 @@ public class MainRelacionamentosOneToOne {
 				
 	}
 	
-	private static void consultarPessoaComCriteria() {
+	public static void consultarPessoaComCriteria() {
 		IPessoaDAO pessoaDAO = new PessoaDAO();
 		pessoaDAO.consultarPessoaComCriteria(
 			ConstantesGerais.CPF_123_456_789_01, 
@@ -41,7 +41,7 @@ public class MainRelacionamentosOneToOne {
 				
 	}
 	
-	private static void consultarPessoaParametrizando() {
+	public static void consultarPessoaParametrizando() {
 		IPessoaDAO pessoaDAO = new PessoaDAO();
 		
 		pessoaDAO.consultarPessoaParametrizando(
@@ -52,17 +52,17 @@ public class MainRelacionamentosOneToOne {
 		 );
 	}
 	
-	private static void consultarNamedNativeQueryComMapeamento() {
+	public static void consultarNamedNativeQueryComMapeamento() {
 		IPessoaDAO pessoaDAO = new PessoaDAO();
 		pessoaDAO.consultarNamedNativeQueryComMapeamento();
 	}
 	
-	private static void consultarDadosPessoais() {
+	public static void consultarDadosPessoais() {
 		IPessoaDAO pessoaDAO = new PessoaDAO();
 		pessoaDAO.consultarDadosPessoais(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void consultarPessoa() {
+	public static void consultarPessoa() {
 		IPessoaDAO pessoaDAO = new PessoaDAO();
 		pessoaDAO.consultarPessoa(ConstantesGerais.CPF_123_456_789_01);
 	}

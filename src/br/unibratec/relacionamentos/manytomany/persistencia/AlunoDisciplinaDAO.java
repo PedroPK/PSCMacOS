@@ -7,9 +7,6 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-import org.hibernate.Cache;
-import org.hibernate.Session;
-
 import br.unibratec.relacionamentos.manytomany.entidades.Aluno;
 import br.unibratec.relacionamentos.manytomany.entidades.AlunoQtDisciplinas;
 import br.unibratec.relacionamentos.manytomany.entidades.Disciplina;
@@ -165,6 +162,7 @@ public class AlunoDisciplinaDAO implements IAlunoDisciplinaDAO {
 		String stringQueryComJoin = "Select a From Aluno a Join a.disciplinasMatriculadas d Where d.descricao Like 'PSC%'";
 		TypedQuery<Aluno> queryComJoin = manager.createQuery(stringQueryComJoin, Aluno.class);
 		Collection<Aluno> alunosPSC = queryComJoin.getResultList();
+		alunosPSC.toString();
 		
 		manager.close();
 	}
@@ -175,6 +173,7 @@ public class AlunoDisciplinaDAO implements IAlunoDisciplinaDAO {
 		String stringQueryComColunaExtra = "Select a, size(disciplinasMatriculadas) From Aluno a";
 		Query queryComColunaExtra = manager.createQuery(stringQueryComColunaExtra);
 		Collection alunos = queryComColunaExtra.getResultList();
+		alunos.toString();
 		
 		manager.close();
 	}
@@ -188,6 +187,7 @@ public class AlunoDisciplinaDAO implements IAlunoDisciplinaDAO {
 				stringQueryComColunaExtraTipada,
 				AlunoQtDisciplinas.class);
 		Collection<AlunoQtDisciplinas> alunos = queryComColunaExtraTipada.getResultList();
+		alunos.toString();
 		
 		manager.close();
 	}
@@ -200,6 +200,7 @@ public class AlunoDisciplinaDAO implements IAlunoDisciplinaDAO {
 				Aluno.CONSULTA_ALUNOS_PSC, 
 				Aluno.class);
 		Collection<Aluno> alunosPSC = namedQuery.getResultList();
+		alunosPSC.toString();
 		
 		manager.close();
 	}
@@ -216,6 +217,7 @@ public class AlunoDisciplinaDAO implements IAlunoDisciplinaDAO {
 		queryParametrizada.setParameter("descricaoDisciplina", "PSC");
 		
 		Collection<Aluno> alunosPSC = queryParametrizada.getResultList();
+		alunosPSC.toString();
 		
 		manager.close();
 	}
@@ -231,6 +233,7 @@ public class AlunoDisciplinaDAO implements IAlunoDisciplinaDAO {
 		BibliotecaFuncoes.habilitarRegiaoCacheQuery(tqAluno, regiaoCache);
 		
 		Collection<Aluno> alunosPSC = tqAluno.getResultList();
+		alunosPSC.toString();
 	}
 
 }

@@ -52,6 +52,7 @@ public class MonografiaDAO implements IMonografiaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			Autor autor = manager.find(Autor.class, pAutor.getCodigoAutor());
+			autor.toString();
 			
 			manager.close();
 		}
@@ -62,6 +63,7 @@ public class MonografiaDAO implements IMonografiaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			Autor autor = manager.find(Autor.class, pCdAutor);
+			autor.toString();
 			
 			manager.close();
 		}
@@ -75,6 +77,7 @@ public class MonografiaDAO implements IMonografiaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			Monografia monografia = manager.find(Monografia.class, pMonografia.getDoi());
+			monografia.toString();
 			
 			manager.close();
 		}
@@ -85,9 +88,10 @@ public class MonografiaDAO implements IMonografiaDAO {
 			EntityManager manager = UtilJPA.getEntityManager();
 			
 			Monografia monografia = manager.find(Monografia.class, pCdMonografia);
+			monografia.toString();
 			
 			manager.close();
 		}
 	}
-
+	
 }

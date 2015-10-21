@@ -60,12 +60,12 @@ public class SubMainHerancaSingleTable {
 		dao.excluirPorChavePrimaria(AlunoSingleTable.class, pChavePrimaria);
 	}
 	
-	private static void consultarAluno() {
+	public static void consultarAluno() {
 		IHerancaSingleTableDAO alunoProfessorHerancaDAO = new HerancaSingleTableDAO();
 		alunoProfessorHerancaDAO.consultarAluno(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void consultarProfessorHeranca() {
+	public static void consultarProfessorHeranca() {
 		IHerancaSingleTableDAO alunoProfessorHerancaDAO = new HerancaSingleTableDAO();
 		alunoProfessorHerancaDAO.consultarProfessorHeranca(ConstantesGerais.CPF_123_456_789_01);
 	}

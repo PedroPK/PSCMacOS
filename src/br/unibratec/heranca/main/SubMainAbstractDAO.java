@@ -33,7 +33,7 @@ public class SubMainAbstractDAO {
 		
 	}
 
-	private static void incluirConsultarAlterarExcluir() {
+	public static void incluirConsultarAlterarExcluir() {
 		inserir();
 		Entidade registro = consultar();
 		
@@ -50,7 +50,7 @@ public class SubMainAbstractDAO {
 		return dao.consultarPorChavePrimaria(AlunoSingleTable.class, ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static Entidade consultar(EntityManager pEntityManager) {
+	public static Entidade consultar(EntityManager pEntityManager) {
 		InterfaceDAO dao = new DAOConcreto();
 		
 					// Tipo escolhido aleatoriamente
@@ -65,7 +65,7 @@ public class SubMainAbstractDAO {
 		);
 	}
 	
-	private static void alterar() {
+	public static void alterar() {
 		InterfaceDAO dao = new DAOConcreto();
 		
 		AlunoSingleTable alunoSingleTable = SubMainHerancaSingleTable.getInstanciaAlunoJoaoSingleTable();
@@ -88,7 +88,7 @@ public class SubMainAbstractDAO {
 		);
 	}
 	
-	private static void excluirPorObjeto() {
+	public static void excluirPorObjeto() {
 		InterfaceDAO dao = new DAOConcreto();
 		dao.excluirPorObjeto(
 			SubMainHerancaSingleTable.getInstanciaAlunoJoaoSingleTable());

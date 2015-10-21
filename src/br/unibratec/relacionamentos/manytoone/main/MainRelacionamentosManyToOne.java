@@ -16,12 +16,12 @@ public class MainRelacionamentosManyToOne {
 		monografiaDAO.consultarMonografia(	Long.valueOf(123456789l)	);
 	}
 	
-	private static void consultarAutor() {
+	public static void consultarAutor() {
 		IMonografiaDAO monografiaDAO = new MonografiaDAO();
 		monografiaDAO.consultarAutor("123456");
 	}
 
-	private static void persistirAutorMonografia() {
+	public static void persistirAutorMonografia() {
 		IMonografiaDAO monografiaDAO = new MonografiaDAO();
 		
 		Autor autor = new Autor();

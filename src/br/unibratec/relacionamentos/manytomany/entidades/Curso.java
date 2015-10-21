@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="curso")
 public class Curso {
+	
 	@Id
 	@Column(name="id_curso")
 	private Integer idCurso;
@@ -43,6 +44,5 @@ public class Curso {
 	public void setDepartamentos(Collection<Departamento> departamentos) {
 		this.departamentos = departamentos;
 	}
-	
 	
 }

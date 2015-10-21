@@ -4,10 +4,8 @@ import java.util.Collection;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-import br.unibratec.heranca.main.SubMainHerancaMappedSuperclass;
 import br.unibratec.heranca.mappedsuperclass.entidades.AlunoHerancaMappedSuperclass;
 import br.unibratec.heranca.mappedsuperclass.entidades.ProfessorHerancaMappedSuperclass;
 import br.unibratec.util.BibliotecaFuncoes;
@@ -176,8 +174,8 @@ public class HerancaMappedSuperclassDAO implements IHerancaMappedSuperclassDAO {
 		
 		String consulta = "Select a From AlunoHerancaMappedSuperclass a Where a.codigoAluno Like '1%'";
 		
-		Query query = manager.createQuery(consulta);
-		Collection registros = query.getResultList();
+		/*Query query = manager.createQuery(consulta);
+		Collection registros = query.getResultList();*/
 				
 		TypedQuery<AlunoHerancaMappedSuperclass> queryAluno = 
 			manager.createQuery(consulta, AlunoHerancaMappedSuperclass.class);
@@ -185,6 +183,7 @@ public class HerancaMappedSuperclassDAO implements IHerancaMappedSuperclassDAO {
 		queryAluno.setMaxResults(3);
 		Collection<AlunoHerancaMappedSuperclass> alunos = 
 			queryAluno.getResultList();
+		alunos.toString();
 		
 		manager.close();
 	}
@@ -201,6 +200,7 @@ public class HerancaMappedSuperclassDAO implements IHerancaMappedSuperclassDAO {
 		
 		Collection<AlunoHerancaMappedSuperclass> alunos = 
 			queryAluno.getResultList();
+		alunos.toString();
 		
 		manager.close();
 	}

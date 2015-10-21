@@ -18,12 +18,12 @@ public class SubMainHerancaJoined {
 		alunoProfessorHerancaDAO.executarQueryComJoin();
 	}
 	
-	private static void consultarAluno() {
+	public static void consultarAluno() {
 		IHerancaJoinedDAO alunoProfessorHerancaDAO = new HerancaJoinedDAO();
 		alunoProfessorHerancaDAO.consultarAluno(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void consultarProfessorHeranca() {
+	public static void consultarProfessorHeranca() {
 		IHerancaJoinedDAO alunoProfessorHerancaDAO = new HerancaJoinedDAO();
 		alunoProfessorHerancaDAO.consultarProfessorHeranca(ConstantesGerais.CPF_123_456_789_01);
 	}

@@ -23,37 +23,37 @@ public class MainRelacionamentosManyToMany {
 		dao.executarQueryComCache2oNivel();
 	}
 	
-	private static void executarQueryParametrizada() {
+	public static void executarQueryParametrizada() {
 		IAlunoDisciplinaDAO alunoDisciplinaDAO = new AlunoDisciplinaDAO();
 		alunoDisciplinaDAO.executarQueryParametrizada();
 	}
 	
-	private static void executarNamedQueryAlunosPSC() {
+	public static void executarNamedQueryAlunosPSC() {
 		IAlunoDisciplinaDAO alunoDisciplinaDAO = new AlunoDisciplinaDAO();
 		alunoDisciplinaDAO.executarNamedQueryAlunosPSC();
 	}
 	
-	private static void executarQueryJPQLComColunasExtrasTipada() {
+	public static void executarQueryJPQLComColunasExtrasTipada() {
 		IAlunoDisciplinaDAO alunoDisciplinaDAO = new AlunoDisciplinaDAO();
 		alunoDisciplinaDAO.executarQueryJPQLComColunasExtrasTipada();
 	}
 	
-	private static void executarQueryJPQLComColunasExtras() {
+	public static void executarQueryJPQLComColunasExtras() {
 		IAlunoDisciplinaDAO alunoDisciplinaDAO = new AlunoDisciplinaDAO();
 		alunoDisciplinaDAO.executarQueryJPQLComColunasExtras();
 	}
 	
-	private static void executarQueryJPQLComJoin() {
+	public static void executarQueryJPQLComJoin() {
 		IAlunoDisciplinaDAO alunoDisciplinaDAO = new AlunoDisciplinaDAO();
 		alunoDisciplinaDAO.executarQueryJPQLComJoin();
 	}
 	
-	private static void consultarAluno() {
+	public static void consultarAluno() {
 		IAlunoDisciplinaDAO alunoDisciplinaDAO = new AlunoDisciplinaDAO();
 		alunoDisciplinaDAO.consultarAluno(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void consultarDisciplina() {
+	public static void consultarDisciplina() {
 		IAlunoDisciplinaDAO alunoDisciplinaDAO = new AlunoDisciplinaDAO();
 		alunoDisciplinaDAO.consultarDisciplina(ConstantesGerais.CPF_123_456_789_01);
 	}

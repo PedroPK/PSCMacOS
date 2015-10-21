@@ -13,12 +13,12 @@ public class SubMainHerancaTablePerClass {
 		persistirAlunoProfessorHerancaTablePerClass();
 	}
 	
-	private static void consultarAluno() {
+	public static void consultarAluno() {
 		IHerancaTablePerClassDAO alunoProfessorHerancaDAO = new HerancaTablePerClassDAO();
 		alunoProfessorHerancaDAO.consultarAluno(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void consultarProfessorHeranca() {
+	public static void consultarProfessorHeranca() {
 		IHerancaTablePerClassDAO alunoProfessorHerancaDAO = new HerancaTablePerClassDAO();
 		alunoProfessorHerancaDAO.consultarProfessorHeranca(ConstantesGerais.CPF_123_456_789_01);
 	}

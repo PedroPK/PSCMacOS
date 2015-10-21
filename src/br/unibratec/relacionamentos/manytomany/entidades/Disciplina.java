@@ -4,16 +4,19 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
 public class Disciplina implements Serializable {
+	
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -8482771200718422648L;
+
 	@Id
 	private String codigo; 
 	

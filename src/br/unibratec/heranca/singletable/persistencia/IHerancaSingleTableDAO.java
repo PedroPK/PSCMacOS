@@ -2,7 +2,6 @@ package br.unibratec.heranca.singletable.persistencia;
 
 import br.unibratec.heranca.singletable.entidades.AlunoSingleTable;
 import br.unibratec.heranca.singletable.entidades.ProfessorSingleTable;
-import br.unibratec.persistencia.InterfaceDAO;
 
 public interface IHerancaSingleTableDAO {
 	

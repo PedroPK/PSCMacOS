@@ -1,12 +1,5 @@
 package br.unibratec.relacionamentos.onetoone.controladores;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import br.unibratec.linhasaereas.entidades.Passageiro;
-import br.unibratec.linhasaereas.persistencia.IPassageiroDAO;
-import br.unibratec.linhasaereas.persistencia.PassageiroDAO;
 import br.unibratec.relacionamentos.onetoone.entidades.DadosPessoais;
 import br.unibratec.relacionamentos.onetoone.entidades.Pessoa;
 import br.unibratec.relacionamentos.onetoone.persistencia.IPessoaDAO;

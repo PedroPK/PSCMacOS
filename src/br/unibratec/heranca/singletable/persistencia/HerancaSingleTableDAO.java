@@ -5,7 +5,6 @@ import javax.persistence.EntityTransaction;
 
 import br.unibratec.heranca.singletable.entidades.AlunoSingleTable;
 import br.unibratec.heranca.singletable.entidades.ProfessorSingleTable;
-import br.unibratec.persistencia.AbstractDAO;
 import br.unibratec.util.BibliotecaFuncoes;
 import br.unibratec.util.UtilJPA;
 

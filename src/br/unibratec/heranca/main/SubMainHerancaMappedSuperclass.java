@@ -1,11 +1,10 @@
 package br.unibratec.heranca.main;
 
-import java.util.Date;
-
 import br.unibratec.heranca.mappedsuperclass.entidades.AlunoHerancaMappedSuperclass;
 import br.unibratec.heranca.mappedsuperclass.entidades.ProfessorHerancaMappedSuperclass;
 import br.unibratec.heranca.mappedsuperclass.persistencia.HerancaMappedSuperclassDAO;
 import br.unibratec.heranca.mappedsuperclass.persistencia.IHerancaMappedSuperclassDAO;
+import br.unibratec.util.BibliotecaFuncoes;
 import br.unibratec.util.ConstantesGerais;
 import br.unibratec.util.UtilJPA;
 
@@ -33,17 +32,17 @@ public class SubMainHerancaMappedSuperclass {
 		alunoProfessorHerancaMappedSuperclassDAO.removerAluno(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void consultarAluno() {
+	public static void consultarAluno() {
 		IHerancaMappedSuperclassDAO alunoProfessorHerancaMappedSuperclassDAO = new HerancaMappedSuperclassDAO();
 		alunoProfessorHerancaMappedSuperclassDAO.consultarAluno(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void getReferenciaAluno() {
+	public static void getReferenciaAluno() {
 		IHerancaMappedSuperclassDAO alunoProfessorHerancaMappedSuperclassDAO = new HerancaMappedSuperclassDAO();
 		alunoProfessorHerancaMappedSuperclassDAO.getReferenciaAluno(ConstantesGerais.CPF_123_456_789_01);
 	}
 	
-	private static void consultarProfessorHeranca() {
+	public static void consultarProfessorHeranca() {
 		IHerancaMappedSuperclassDAO alunoProfessorHerancaMappedSuperclassDAO = new HerancaMappedSuperclassDAO();
 		alunoProfessorHerancaMappedSuperclassDAO.consultarProfessorHeranca(ConstantesGerais.CPF_123_456_789_01);
 	}
@@ -66,7 +65,7 @@ public class SubMainHerancaMappedSuperclass {
 		ProfessorHerancaMappedSuperclass professorHerancaMappedSuperclass1 = new ProfessorHerancaMappedSuperclass();
 		professorHerancaMappedSuperclass1.setCodigoProfessor(ConstantesGerais.UM);
 		professorHerancaMappedSuperclass1.setNome("Pedro Santos");
-		professorHerancaMappedSuperclass1.setDataContratacao(new Date("06/08/2015"));
+		professorHerancaMappedSuperclass1.setDataContratacao(BibliotecaFuncoes.getData("06/08/2015"));
 		
 		ProfessorHerancaMappedSuperclass ProfessorHerancaMappedSuperclass2 = new ProfessorHerancaMappedSuperclass();
 		ProfessorHerancaMappedSuperclass2.setCodigoProfessor(ConstantesGerais.DOIS);
@@ -88,7 +87,7 @@ public class SubMainHerancaMappedSuperclass {
 		alunoProfessorHerancaMappedSuperclassDAO.persistir(ProfessorHerancaMappedSuperclass3);
 		alunoProfessorHerancaMappedSuperclassDAO.persistir(ProfessorHerancaMappedSuperclass4);
 	}
-	
+
 	public static void atualizarRelacionamentos () {
 		IHerancaMappedSuperclassDAO dao = new HerancaMappedSuperclassDAO();
 		

@@ -58,6 +58,7 @@ public class CursoDepartamentoDAO implements ICursoDepartamentoDAO {
 		) {
 			EntityManager manager = UtilJPA.getEntityManager();
 			Curso c = manager.find(Curso.class, pCurso);
+			c.toString();
 		}
 	}
 	
@@ -66,6 +67,7 @@ public class CursoDepartamentoDAO implements ICursoDepartamentoDAO {
 		if (	BibliotecaFuncoes.isStringValida(pCdCurso)		) {
 			EntityManager manager = UtilJPA.getEntityManager();
 			Curso c = manager.find(Curso.class, pCdCurso);
+			c.toString();
 		}
 	}
 	
@@ -76,6 +78,7 @@ public class CursoDepartamentoDAO implements ICursoDepartamentoDAO {
 		) {
 			EntityManager manager = UtilJPA.getEntityManager();
 			Departamento d = manager.find(Departamento.class, pDepartamento);
+			d.toString();
 		}
 	}
 	
@@ -84,6 +87,7 @@ public class CursoDepartamentoDAO implements ICursoDepartamentoDAO {
 		if (	BibliotecaFuncoes.isStringValida(pCdDepartamento)		) {
 			EntityManager manager = UtilJPA.getEntityManager();
 			Departamento d = manager.find(Departamento.class, pCdDepartamento);
+			d.toString();
 		}
 	}
 	
