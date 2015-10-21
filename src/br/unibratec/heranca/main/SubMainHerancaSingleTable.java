@@ -53,7 +53,7 @@ public class SubMainHerancaSingleTable {
 	
 	private static void excluirPorObjeto(AlunoSingleTable pAluno) {
 		IHerancaDAO dao = new HerancaConcretaDAO();
-		dao.excluirPorObjeto(AlunoSingleTable.class, pAluno);
+		dao.excluirPorObjeto(pAluno);
 	}
 	private static void excluirPorChavePrimaria(Object pChavePrimaria) {
 		IHerancaDAO dao = new HerancaConcretaDAO();

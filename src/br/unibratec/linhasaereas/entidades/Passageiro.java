@@ -8,8 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import br.unibratec.entidades.Entidade;
+
 @Entity
-public class Passageiro {
+public class Passageiro implements Entidade {
 	
 	@Id
 	private String		aCPF;
@@ -50,35 +52,40 @@ public class Passageiro {
 		this.aIsPortadorNecessidadesEspeciais = aIsPortadorNecessidadesEspeciais;
 	}
 	
-	public String getaCPF() {
+	public String getCPF() {
 		return aCPF;
 	}
-	public void setaCPF(String aCPF) {
-		this.aCPF = aCPF;
+	public void setCPF(String pCPF) {
+		this.aCPF = pCPF;
 	}
-	public String getaNome() {
+	public String getNome() {
 		return aNome;
 	}
-	public void setaNome(String aNome) {
-		this.aNome = aNome;
+	public void setNome(String pNome) {
+		this.aNome = pNome;
 	}
-	public String getaEMail() {
+	public String getEMail() {
 		return aEMail;
 	}
-	public void setaEMail(String aEMail) {
-		this.aEMail = aEMail;
+	public void setEMail(String pEMail) {
+		this.aEMail = pEMail;
 	}
-	public Date getaDataNascimento() {
+	public Date getDataNascimento() {
 		return aDataNascimento;
 	}
-	public void setaDataNascimento(Date aDataNascimento) {
-		this.aDataNascimento = aDataNascimento;
+	public void setDataNascimento(Date pDataNascimento) {
+		this.aDataNascimento = pDataNascimento;
 	}
-	public boolean isaIsPortadorNecessidadesEspeciais() {
+	public boolean isPortadorNecessidadesEspeciais() {
 		return aIsPortadorNecessidadesEspeciais;
 	}
-	public void setaIsPortadorNecessidadesEspeciais(boolean aIsPortadorNecessidadesEspeciais) {
-		this.aIsPortadorNecessidadesEspeciais = aIsPortadorNecessidadesEspeciais;
+	public void setIsPortadorNecessidadesEspeciais(boolean pIsPortadorNecessidadesEspeciais) {
+		this.aIsPortadorNecessidadesEspeciais = pIsPortadorNecessidadesEspeciais;
+	}
+	
+	@Override
+	public Object getChavePrimaria() {
+		return getCPF();
 	}
 	
 	

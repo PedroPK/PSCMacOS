@@ -91,7 +91,6 @@ public class SubMainAbstractDAO {
 	private static void excluirPorObjeto() {
 		InterfaceDAO dao = new DAOConcreto();
 		dao.excluirPorObjeto(
-			AlunoSingleTable.class, 
 			SubMainHerancaSingleTable.getInstanciaAlunoJoaoSingleTable());
 	}
 	
