@@ -9,7 +9,7 @@ import br.unibratec.util.UtilJPA;
 public abstract class AbstractDAO implements InterfaceDAO {
 	
 	/*
-	 * Versï¿½o anterior do mï¿½todo abaixo
+	 * Versão anterior do método abaixo
 	 * 
 	 * 
 	public void inserir(Entidade pEntidade) {
@@ -35,7 +35,7 @@ public abstract class AbstractDAO implements InterfaceDAO {
 	}
 	
 	/*
-	 * Versï¿½o anterior do mï¿½todo abaixo
+	 * Versão anterior do método abaixo
 	 * 
 	 * 
 	public void alterar(Entidade pEntidade) {
@@ -66,7 +66,7 @@ public abstract class AbstractDAO implements InterfaceDAO {
 	}
 	
 	/*
-	 * Versï¿½o anterior do mï¿½todo abaixo
+	 * Versão anterior do método abaixo
 	 * 
 	 * 
 	public void excluirPorObjeto(Class pClasse, Entidade pEntidade) {
@@ -128,7 +128,7 @@ public abstract class AbstractDAO implements InterfaceDAO {
 	}
 	
 	/*
-	 * Versï¿½o anterior do mï¿½todo abaixo
+	 * Versão anterior do método abaixo
 	 * 
 	 * 
 	public void excluirPorChavePrimaria(Class pClasse, Object pChavePrimaria) {
@@ -183,7 +183,7 @@ public abstract class AbstractDAO implements InterfaceDAO {
 	}
 	
 	/*
-	 * Versï¿½o anterior do mï¿½todo abaixo
+	 * Versão anterior do método abaixo
 	 * 
 	 * 
 	public Object consultar(Class pClasse, Object pPrimaryKey) {
