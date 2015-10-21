@@ -25,12 +25,13 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.sql.JoinType;
 
+import br.unibratec.persistencia.AbstractDAO;
 import br.unibratec.relacionamentos.onetoone.entidades.DadosPessoais;
 import br.unibratec.relacionamentos.onetoone.entidades.Pessoa;
 import br.unibratec.util.BibliotecaFuncoes;
 import br.unibratec.util.UtilJPA;
 
-public class PessoaDAO implements IPessoaDAO {
+public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 	
 	public void persistir(Pessoa pPessoa, DadosPessoais pDadosPessoais) {
 		EntityManager manager = UtilJPA.getEntityManager();

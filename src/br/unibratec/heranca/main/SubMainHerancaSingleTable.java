@@ -32,7 +32,7 @@ public class SubMainHerancaSingleTable {
 	private static AlunoSingleTable consultar() {
 		IHerancaDAO dao = new HerancaConcretaDAO();
 		AlunoSingleTable aluno = 
-			(AlunoSingleTable) dao.consultar(
+			(AlunoSingleTable) dao.consultarPorChavePrimaria(
 				AlunoSingleTable.class, 
 				ConstantesGerais.CPF_123_456_789_01);
 		

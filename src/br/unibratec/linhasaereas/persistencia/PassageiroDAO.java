@@ -11,7 +11,7 @@ public class PassageiroDAO extends AbstractDAO implements IPassageiroDAO {
 	
 	public Passageiro consultar(Object pChavePrimaria) {
 		Passageiro registro = 
-			(Passageiro) super.consultar(
+			(Passageiro) super.consultarPorChavePrimaria(
 							Passageiro.class, 
 							pChavePrimaria);
 		
