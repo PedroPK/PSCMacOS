@@ -80,7 +80,7 @@ public class Aluno implements Serializable {
 	
 	public void adicionarDisciplina( Disciplina pDisciplina ) {
 		if ( this.disciplinasMatriculadas == null ) {
-			this.disciplinasMatriculadas = new HashSet<>();
+			this.disciplinasMatriculadas = new HashSet<Disciplina>();
 		}
 		this.disciplinasMatriculadas.add(pDisciplina);
 		pDisciplina.matricularAluno(this);

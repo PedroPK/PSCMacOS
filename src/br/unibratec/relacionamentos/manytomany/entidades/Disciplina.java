@@ -53,7 +53,7 @@ public class Disciplina implements Serializable {
 	
 	public void matricularAluno( Aluno pAluno ) {
 		if ( this.alunosMatriculados == null ) {
-			this.alunosMatriculados = new HashSet<>();
+			this.alunosMatriculados = new HashSet<Aluno>();
 		}
 		
 		this.alunosMatriculados.add(pAluno);

@@ -139,7 +139,6 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 		manager.close();
 	}
 
-	@Override
 	public void consultarPessoaParametrizando(
 		String pCPF, 
 		String pEndereco,
@@ -218,7 +217,7 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 		CriteriaQuery<Pessoa> queryCriteria = builderCriteria.createQuery(Pessoa.class);
 		Root<Pessoa> pessoa = queryCriteria.from(Pessoa.class);
 		
-		List<Predicate> condicoesWhere = new ArrayList<>();
+		List<Predicate> condicoesWhere = new ArrayList<Predicate>();
 		
 		if ( BibliotecaFuncoes.isStringValida(pCPF) ) {
 			Path<String> atributoCPF = pessoa.get("cpf");
