@@ -119,12 +119,12 @@ public class PessoaDAO extends AbstractDAO implements IPessoaDAO {
 		EntityManager manager = UtilJPA.getEntityManager();
 		
 		Query query = manager.createNamedQuery(Pessoa.NM_QUERY_NATIVA);
-		Collection resultSet = query.getResultList();
+		Collection<Object[]> resultSet = query.getResultList();
 		if ( BibliotecaFuncoes.isColecaoValida(resultSet) ) {
-			Iterator iterador = resultSet.iterator();
+			Iterator<Object[]> iterador = resultSet.iterator();
 			
 			while ( iterador.hasNext() ) {
-				Object[] objetosColuna = (Object[]) iterador.next();
+				Object[] objetosColuna = iterador.next();
 				
 				if ( BibliotecaFuncoes.isArrayValido(objetosColuna, 1) ) {
 					Pessoa pessoa = (Pessoa) objetosColuna[0];
